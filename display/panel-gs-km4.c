@@ -2284,7 +2284,7 @@ static const struct gs_panel_funcs km4_gs_funcs = {
 static const struct gs_brightness_configuration km4_btr_configs[] = {
 	{
 		.panel_rev = PANEL_REV_EVT1 | PANEL_REV_LATEST,
-		.default_brightness = 1240,
+		.default_brightness = 1209,
 		.brt_capability = {
 			.normal = {
 				.nits = {
