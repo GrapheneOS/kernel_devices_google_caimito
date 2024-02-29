@@ -202,8 +202,8 @@ static const struct drm_dsc_config fhd_pps_config = {
 #define WIDTH_MM 70
 #define HEIGHT_MM 156
 
-#define MIPI_DSI_FREQ_DEFAULT 1368
-#define MIPI_DSI_FREQ_ALTERNATIVE 1288
+#define MIPI_DSI_FREQ_MBPS_DEFAULT 1368
+#define MIPI_DSI_FREQ_MBPS_ALTERNATIVE 1288
 
 #define PROJECT "KM4"
 
@@ -1446,7 +1446,7 @@ static int km4_enable(struct drm_panel *panel)
 		GS_DCS_WRITE_DELAY_CMD(dev, 120, MIPI_DCS_EXIT_SLEEP_MODE);
 		gs_panel_send_cmdset(ctx, &km4_init_cmdset);
 		spanel->is_pixel_off = false;
-		ctx->dsi_hs_clk = MIPI_DSI_FREQ_DEFAULT;
+		ctx->dsi_hs_clk_mbps = MIPI_DSI_FREQ_MBPS_DEFAULT;
 	}
 
 	GS_DCS_BUF_ADD_CMDLIST(dev, unlock_cmd_f0);
@@ -1718,31 +1718,33 @@ static void km4_pre_update_ffc(struct gs_panel *ctx)
 	DPU_ATRACE_END(__func__);
 }
 
-static void km4_update_ffc(struct gs_panel *ctx, unsigned int hs_clk)
+static void km4_update_ffc(struct gs_panel *ctx, unsigned int hs_clk_mbps)
 {
 	struct device *dev = ctx->dev;
 
-	dev_dbg(dev, "%s: hs_clk: current=%d, target=%d\n", __func__, ctx->dsi_hs_clk, hs_clk);
+	dev_dbg(dev, "%s: hs_clk_mbps: current=%d, target=%d\n", __func__,
+		ctx->dsi_hs_clk_mbps, hs_clk_mbps);
 
 	DPU_ATRACE_BEGIN(__func__);
 
 	GS_DCS_BUF_ADD_CMDLIST(dev, unlock_cmd_f0);
 
-	if (hs_clk != MIPI_DSI_FREQ_DEFAULT && hs_clk != MIPI_DSI_FREQ_ALTERNATIVE) {
-		dev_warn(dev, "%s: invalid hs_clk=%d for FFC\n", __func__, hs_clk);
-	} else if (ctx->dsi_hs_clk != hs_clk) {
-		dev_info(dev, "%s: updating for hs_clk=%d\n", __func__, hs_clk);
-		ctx->dsi_hs_clk = hs_clk;
+	if (hs_clk_mbps != MIPI_DSI_FREQ_MBPS_DEFAULT &&
+	    hs_clk_mbps != MIPI_DSI_FREQ_MBPS_ALTERNATIVE) {
+		dev_warn(dev, "%s: invalid hs_clk_mbps=%d for FFC\n", __func__, hs_clk_mbps);
+	} else if (ctx->dsi_hs_clk_mbps != hs_clk_mbps) {
+		dev_info(dev, "%s: updating for hs_clk_mbps=%d\n", __func__, hs_clk_mbps);
+		ctx->dsi_hs_clk_mbps = hs_clk_mbps;
 
 		/* Update FFC */
 		GS_DCS_BUF_ADD_CMD(dev, 0xB0, 0x00, 0x37, 0xC5);
-		if (hs_clk == MIPI_DSI_FREQ_DEFAULT)
+		if (hs_clk_mbps == MIPI_DSI_FREQ_MBPS_DEFAULT)
 			GS_DCS_BUF_ADD_CMD(dev, 0xC5, 0x10, 0x50, 0x05, 0x4D, 0x31, 0x40, 0x00,
 					   0x40, 0x00, 0x40, 0x00, 0x4D, 0x31, 0x40, 0x00, 0x40,
 					   0x00, 0x40, 0x00, 0x4D, 0x31, 0x40, 0x00, 0x40, 0x00,
 					   0x40, 0x00, 0x4D, 0x31, 0x40, 0x00, 0x40, 0x00, 0x40,
 					   0x00);
-		else /* MIPI_DSI_FREQ_ALTERNATIVE */
+		else /* MIPI_DSI_FREQ_MBPS_ALTERNATIVE */
 			GS_DCS_BUF_ADD_CMD(dev, 0xC5, 0x10, 0x50, 0x05, 0x51, 0xFD, 0x40, 0x00,
 					   0x40, 0x00, 0x40, 0x00, 0x51, 0xFD, 0x40, 0x00, 0x40,
 					   0x00, 0x40, 0x00, 0x51, 0xFD, 0x40, 0x00, 0x40, 0x00,
@@ -2424,7 +2426,7 @@ static struct gs_panel_desc gs_km4 = {
 	.is_idle_supported = true,
 	.panel_func = &km4_drm_funcs,
 	.gs_panel_func = &km4_gs_funcs,
-	.default_dsi_hs_clk = MIPI_DSI_FREQ_DEFAULT,
+	.default_dsi_hs_clk_mbps = MIPI_DSI_FREQ_MBPS_DEFAULT,
 	.reset_timing_ms = { 1, 1, 5 },
 };
 
