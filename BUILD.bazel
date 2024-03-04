@@ -132,6 +132,7 @@ _ZUMAPRO_CAIMITO_DTBOS = [
     "google/zumapro-komodo-evt1_1-samsung-gnss.dtbo",
     "google/zumapro-komodo-evt1_1-wingboard.dtbo",
     "google/zumapro-komodo-dvt1.dtbo",
+    "google/zumapro-komodo-dvt1-wingboard.dtbo",
     "google/zumapro-komodo-pvt1.dtbo",
     "google/zumapro-komodo-mp.dtbo",
     "google/zumapro-caiman-evt1-broadcom-gnss.dtbo",
@@ -146,6 +147,7 @@ _ZUMAPRO_CAIMITO_DTBOS = [
     "google/zumapro-caiman-evt1_1-wingboard.dtbo",
     "google/zumapro-caiman-dvt1.dtbo",
     "google/zumapro-caiman-dvt1-i2cm.dtbo",
+    "google/zumapro-caiman-dvt1-wingboard.dtbo",
     "google/zumapro-caiman-pvt1.dtbo",
     "google/zumapro-caiman-mp.dtbo",
     "google/zumapro-tokay-evt1-broadcom-gnss.dtbo",
@@ -155,6 +157,7 @@ _ZUMAPRO_CAIMITO_DTBOS = [
     "google/zumapro-tokay-evt1_1-samsung-gnss.dtbo",
     "google/zumapro-tokay-evt1_1-wingboard.dtbo",
     "google/zumapro-tokay-dvt1.dtbo",
+    "google/zumapro-tokay-dvt1-wingboard.dtbo",
     "google/zumapro-tokay-pvt1.dtbo",
     "google/zumapro-tokay-mp.dtbo",
 ]
