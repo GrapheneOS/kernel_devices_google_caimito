@@ -14,8 +14,6 @@
 	goog,offload-caps-scan-types = /bits/ 16 <0xC0>;
 	goog,offload-caps-context-channel-types = /bits/ 16 <0x0100>;
 	goog,offload-caps-coord-filter;
-	goog,default-grip-disabled;
-	goog,default-palm-disabled;
 	goog,lptw-tracking-area = <465 815 1893 2243>;
 
 	synaptics,pixels-per-mm = <19>;
