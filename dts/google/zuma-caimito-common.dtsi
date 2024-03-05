@@ -18,6 +18,7 @@
 #include "google-dts-base/zumapro-board-cp-s5400-sit.dtsi"
 #include "google-dts-base/zumapro-board-cp-s5400-sit-pre-dvt.dtsi"
 #include "google-dts-base/zumapro-cp-s5400-proto.dtsi"
+#include "google-dts-base/zumapro-rmem-proto.dtsi"
 #include "google-dts-base/zuma-board-bluetooth.dtsi"
 #include "zuma-caimito-ese.dtsi"
 #include "zuma-caimito-nfc.dtsi"
