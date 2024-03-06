@@ -16,3 +16,5 @@ dtbs
 
 DTC_INCLUDE=${ROOT_DIR}/${SOC_DIR}/include/dtc
 MKDTIMG_FLAGS="--page_size=4096 --id=/:board_id --rev=/:board_rev"
+
+BCMDHD=4390
