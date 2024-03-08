@@ -16,6 +16,7 @@
 #include "google-dts-base/zumapro-phone-gps.dtsi"
 #include "zumapro-wingboard-charging.dtsi"
 #include "zumapro-wingboard-battery.dtsi"
+#include "zumapro-tokay-wifi-4390a0.dtsi"
 
 / {
 	board_id = <0x60a03>;
