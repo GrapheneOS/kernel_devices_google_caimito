@@ -49,9 +49,10 @@
 };
 
 &drmdecon1 {
-	status = "disabled";
+	status = "okay";
+	connector = <0x10>;
 };
 
 &drmdecon2 {
-	status = "okay";
+	status = "disabled";
 };
