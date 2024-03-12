@@ -39,8 +39,6 @@
 	clock-frequency = <950000>;
 	pinctrl-0 = <&hsi2c6_bus>;
 
-	samsung,polling-mode;
-
 	#include "google-dts-base/zuma-max777xx.dtsi"
 };
 

@@ -57,8 +57,6 @@
 	#address-cells = <1>;
 	#size-cells = <0>;
 
-	samsung,polling-mode;
-
 	#include "google-dts-base/zuma-wcharger-ra9530.dtsi"
 };
 #else
