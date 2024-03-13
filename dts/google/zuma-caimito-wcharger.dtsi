@@ -76,4 +76,5 @@
 	idt,gpio_ldo_en = <&max77779_sgpio 3 GPIO_ACTIVE_LOW>;
 
 	idt,ramp-disable;
+	google,enable_15w;
 };
