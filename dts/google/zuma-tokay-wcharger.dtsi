@@ -7,8 +7,6 @@
  */
 
 &ra9530 {
-	/* HPP */
-	/* Disable HPP before GPP_15W is ready */
 	idt,has_wlc_dc = <0>;
 	google,gpp_enhanced;
 	google,gpp_dcicl_ua = <1500000>;
