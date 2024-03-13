@@ -77,4 +77,7 @@
 
 	idt,ramp-disable;
 	google,enable_15w;
+
+	/* TXID: Phone type */
+	idt,tx_id_phone_type = /bits/ 8 <5>;
 };
