@@ -12,7 +12,7 @@
 #include "zumapro-ripcurrentpro-haptics.dtsi"
 #include "google-dts-base/zumapro-board-pcie.dtsi"
 #include "google-dts-base/zuma-board-wlan.dtsi"
-#include "google-dts-base/zumapro-board-cp-s5400-sit.dtsi"
+#include "zumapro-ripcurrentpro-cp-s5400-sit.dtsi"
 #include "google-dts-base/devices/ripcurrent/zuma-ripcurrent-sbbm.dtsi"
 #include "zumapro-dma-heap.dtsi"
 

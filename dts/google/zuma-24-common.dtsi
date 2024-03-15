@@ -16,7 +16,7 @@
 #include "google-dts-base/devices/ripcurrent/zuma-ripcurrent-touch.dtsi"
 #include "google-dts-base/devices/ripcurrent/zuma-ripcurrent-usb.dtsi"
 #include "google-dts-base/zuma-board-wlan.dtsi"
-#include "google-dts-base/zumapro-board-cp-s5400-sit.dtsi"
+#include "zuma-ripcurrent-cp-s5400-sit.dtsi"
 #include "google-dts-base/zuma-board-bluetooth.dtsi"
 #include "google-dts-base/zuma-board-ese.dtsi"
 #include "google-dts-base/zuma-board-nfc.dtsi"
