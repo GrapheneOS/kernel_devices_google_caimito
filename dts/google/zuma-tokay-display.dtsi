@@ -40,20 +40,6 @@
 		vddd-gpios = <&gpp21 5 GPIO_ACTIVE_HIGH>;
 	};
 
-	google_tk4a: panel@1 {
-		compatible = "google,tk4a";
-		label = "google-tk4a";
-		channel = <0>;
-		touch = <&spitouch>;
-
-		/* reset, power */
-		reset-gpios = <&gpp0 0 GPIO_ACTIVE_HIGH>;
-		vci-supply = <&m_ldo14_reg>;
-		vddi-supply = <&s_bucka_reg>;
-		vddd-supply = <&disp_vddd>;
-		vddd-gpios = <&gpp21 5 GPIO_ACTIVE_HIGH>;
-	};
-
 	panel@3 {
 		compatible = "samsung,emul";
 		label = "samsung-emul";
@@ -74,7 +60,6 @@
 			};
 		};
 	};
-
 };
 
 &disp_vddd {
