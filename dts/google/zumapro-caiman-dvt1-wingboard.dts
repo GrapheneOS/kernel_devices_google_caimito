@@ -10,6 +10,7 @@
 
 #include "zumapro-caimito-common.dtsi"
 #include "zumapro-caiman-common.dtsi"
+#include "zuma-tokay-4_5V-battery.dtsi"
 #include "google-dts-base/max777xx-fwupdate.dtsi"
 #include "google-dts-base/zumapro-phone-ignss.dtsi"
 #include "zumapro-wingboard-charging.dtsi"
