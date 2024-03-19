@@ -56,7 +56,21 @@
 					vddd_gpio_fixed_level = <0>;
 				};
 
-				panel@2 {
+				google_gs_tk4b: panel@2 {
+					compatible = "google,gs-tk4b";
+					label = "google-tk4b";
+					channel = <0>;
+					touch = <&spitouch>;
+
+					/* reset, power */
+					reset-gpios = <&gpp0 0 GPIO_ACTIVE_HIGH>;
+					vci-supply = <&m_ldo14_reg>;
+					vddi-supply = <&s_bucka_reg>;
+					vddd-supply = <&disp_vddd>;
+					vddd-gpios = <&gpp21 5 GPIO_ACTIVE_HIGH>;
+				};
+
+				panel@3 {
 					compatible = "google,panel-gs-simple";
 					label = "samsung-emul";
 					channel = <0>;

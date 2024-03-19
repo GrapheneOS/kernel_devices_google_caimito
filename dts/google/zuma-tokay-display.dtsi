@@ -26,21 +26,7 @@
 	#address-cells = <1>;
 	#size-cells = <0>;
 
-	google_tk4b: panel@0 {
-		compatible = "google,tk4b";
-		label = "google-tk4b";
-		channel = <0>;
-		touch = <&spitouch>;
-
-		/* reset, power */
-		reset-gpios = <&gpp0 0 GPIO_ACTIVE_HIGH>;
-		vci-supply = <&m_ldo14_reg>;
-		vddi-supply = <&s_bucka_reg>;
-		vddd-supply = <&disp_vddd>;
-		vddd-gpios = <&gpp21 5 GPIO_ACTIVE_HIGH>;
-	};
-
-	panel@3 {
+	panel@0 {
 		compatible = "samsung,emul";
 		label = "samsung-emul";
 		channel = <0>;
