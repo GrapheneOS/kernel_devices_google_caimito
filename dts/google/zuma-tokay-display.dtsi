@@ -7,6 +7,7 @@
  */
 
 #include <dt-bindings/gpio/gpio.h>
+#include "zuma-tokay-connector.dtsi"
 
 &dsim_modes {
 	dsim-modes {
@@ -53,21 +54,6 @@
 		vddd-gpios = <&gpp21 5 GPIO_ACTIVE_HIGH>;
 	};
 
-	google_tk4c: panel@2 {
-		compatible = "google,tk4c";
-		label = "google-tk4c";
-		channel = <0>;
-		touch = <&spitouch>;
-
-		/* reset, power */
-		reset-gpios = <&gpp0 0 GPIO_ACTIVE_HIGH>;
-		vci-supply = <&m_ldo14_reg>;
-		vddi-supply = <&s_bucka_reg>;
-		vddd-supply = <&disp_vddd>;
-		vddd-gpios = <&gpp21 5 GPIO_ACTIVE_HIGH>;
-		vddd_gpio_fixed_level = <0>;
-	};
-
 	panel@3 {
 		compatible = "samsung,emul";
 		label = "samsung-emul";
@@ -76,6 +62,19 @@
 		/* reset, power */
 		reset-gpios = <&gpp0 0 GPIO_ACTIVE_HIGH>;
 	};
+
+	ports {
+		#address-cells = <1>;
+		#size-cells = <0>;
+		port@0 {
+			reg = <0>;
+			/* output */
+			dsim0_connector_out: endpoint {
+				remote-endpoint = <&dsim0_connector_in>;
+			};
+		};
+	};
+
 };
 
 &disp_vddd {

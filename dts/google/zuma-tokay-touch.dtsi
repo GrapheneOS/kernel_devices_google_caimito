@@ -9,7 +9,7 @@
 &spitouch {
 	goog,panel_map = <&google_tk4a 0>,
 			 <&google_tk4b 1>,
-			 <&google_tk4c 0>;
+			 <&google_gs_tk4c 0>;
 	goog,touch_offload_ids = /bits/ 8 <'t' 'k' '4' '0' 't' 'k' '4' '1'>;
 	goog,display-resolution = /bits/ 16 <1080 2424>;
 	goog,channel-num = /bits/ 16 <16 36>;
@@ -22,7 +22,7 @@
 	synaptics,pixels-per-mm = <17>;
 	synaptics,panel_map = <&google_tk4a 0>,
 			      <&google_tk4b 1>,
-			      <&google_tk4c 2>;
+			      <&google_gs_tk4c 2>;
 	synaptics,firmware_names = "synaptics.img",
 				   "synaptics_b.img",
 				   "synaptics_c.img";
