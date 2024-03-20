@@ -15,6 +15,7 @@
 	idt,gpio_ben = <&ln8411_gpio 0 GPIO_ACTIVE_HIGH>;
 	idt,rtx_wait_ben;
 	google,wcin_inlim_en = <&max77779_gpio 0 GPIO_ACTIVE_HIGH>;
+	idt,has_rtx_gpio;
 	/* BPP ICL */
 	google,bpp_dcicl_default_ua = <600000>;
 	google,bpp_dcicl_lower_vout_ua = <750000>;
