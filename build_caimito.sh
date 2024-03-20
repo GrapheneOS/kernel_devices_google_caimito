@@ -15,7 +15,7 @@ fi
 
 if [ "${#}" = "0" ]; then
   parameters=
-  bazelrc_file="private/google-modules/soc/gs/device.bazelrc"
+  bazelrc_file="private/devices/google/common/device.bazelrc"
   GKI_BUILD_ID=`sed -n 's/.*gki_prebuilts=\([0-9]\+\).*/\1/p' $bazelrc_file`
   USE_GKI=`grep "^build --config=download_gki" $bazelrc_file`
   NO_USE_GKI=`grep "^build --config=no_download_gki" $bazelrc_file`
@@ -30,7 +30,7 @@ if [ "${#}" = "0" ]; then
   elif [ -n "${GKI_BUILD_ID}" ] && [ -n "${USE_GKI}" ] && [ -z "${NO_USE_GKI}" ] && [ -z "${USE_AOSP}" ] && [ -z "${USE_AOSP_STAGING}" ]; then
     echo -e "\nBuilding with GKI prebuilts from ab/$GKI_BUILD_ID - kernel_aarch64\n"
   else
-    echo -e "\nPlease check private/google-modules/soc/gs/device.bazelrc"
+    echo -e "\nPlease check private/devices/google/common/device.bazelrc"
     echo -e "   1) IF \"build --config=use_source_tree_aosp\"           ----> core-kernel generated from source tree aosp/"
     echo -e "   2) IF \"build --config=use_source_tree_aosp_staging\"   ----> core-kernel generated from source tree aosp-staging/"
     echo -e "   3) IF \"build --config=download_gki\"                   ----> core-kernel based on GKI prebuilts\n"
