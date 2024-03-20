@@ -13,6 +13,7 @@
 #include "zuma-caimito-common.dtsi"
 #include "zuma-komodo-common.dtsi"
 #include "google-dts-base/zumapro-phone-gps.dtsi"
+#include "zuma-komodo-wifi-4390a0.dtsi"
 
 / {
 	board_id = <0x40802>;

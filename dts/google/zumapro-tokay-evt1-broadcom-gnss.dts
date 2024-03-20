@@ -14,6 +14,7 @@
 #include "google-dts-base/zumapro-board-cp-s5400-sit-pre-dvt.dtsi"
 #include "zumapro-tokay-common.dtsi"
 #include "google-dts-base/zumapro-phone-gps.dtsi"
+#include "zumapro-tokay-wifi-4390a0.dtsi"
 
 / {
 	board_id = <0x60a03>;
