@@ -10,9 +10,14 @@
 #include "zuma-tokay-wcharger.dtsi"
 #include "zuma-tokay-usecases.dtsi"
 #include "zuma-tokay-audio.dtsi"
+#ifdef ZUMA_TOKAY_WINGBOARD_CAMERA
+#include "zuma-komodo-camera.dtsi"
+#include "zuma-tokay-wingboard-camera.dtsi"
+#else
 #include "zuma-tokay-camera.dtsi"
-#include "zuma-tokay-display.dtsi"
 #include "zuma-tokay-ldaf.dtsi"
+#endif
+#include "zuma-tokay-display.dtsi"
 #include "zuma-tokay-pmic.dtsi"
 #include "zuma-tokay-touch.dtsi"
 #include "zumapro-tokay-bcl.dtsi"

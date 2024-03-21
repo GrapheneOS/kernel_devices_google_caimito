@@ -9,6 +9,7 @@
 /plugin/;
 
 #define ZUMA_BMS_ENABLE_CHG_PROFILE_SWITCH
+#define ZUMA_TOKAY_WINGBOARD_CAMERA
 #include "zumapro-caimito-common.dtsi"
 #include "google-dts-base/zumapro-board-cp-s5400-sit-pre-dvt.dtsi"
 #include "zumapro-tokay-common.dtsi"
