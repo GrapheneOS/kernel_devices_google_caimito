@@ -15,3 +15,4 @@
 #include "zuma-komodo-camera.dtsi"
 #include "zuma-caiman-display.dtsi"
 #include "zuma-caiman-touch.dtsi"
+#include "zuma-caiman-charging.dtsi"
