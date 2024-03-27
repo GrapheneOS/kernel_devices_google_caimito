@@ -21,12 +21,12 @@ if [ "${#}" = "0" ]; then
   NO_USE_GKI=`grep "^build --config=no_download_gki" $bazelrc_file`
   USE_AOSP=`grep "^build --config=use_source_tree_aosp$" $bazelrc_file`
   USE_AOSP_STAGING=`grep "^build --config=use_source_tree_aosp_staging$" $bazelrc_file`
-  if [ "${BUILD_AOSP_KERNEL}" = "1" ] || [ -n "${USE_AOSP}" ]; then
-    echo -e "\nBuilding with core-kernel generated from source tree aosp/\n"
-    parameters="--config=use_source_tree_aosp --config=no_download_gki"
-  elif [ "${BUILD_STAGING_KERNEL}" = "1" ] || [ -n "${USE_AOSP_STAGING}" ]; then
+  if [ "${BUILD_STAGING_KERNEL}" = "1" ] || [ -n "${USE_AOSP_STAGING}" ]; then
     echo -e "\nBuilding with core-kernel generated from source tree aosp-staging/\n"
     parameters="--config=use_source_tree_aosp_staging --config=no_download_gki"
+  elif [ "${BUILD_AOSP_KERNEL}" = "1" ] || [ -n "${USE_AOSP}" ]; then
+    echo -e "\nBuilding with core-kernel generated from source tree aosp/\n"
+    parameters="--config=use_source_tree_aosp --config=no_download_gki"
   elif [ -n "${GKI_BUILD_ID}" ] && [ -n "${USE_GKI}" ] && [ -z "${NO_USE_GKI}" ] && [ -z "${USE_AOSP}" ] && [ -z "${USE_AOSP_STAGING}" ]; then
     echo -e "\nBuilding with GKI prebuilts from ab/$GKI_BUILD_ID - kernel_aarch64\n"
   else
