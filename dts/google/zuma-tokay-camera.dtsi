@@ -567,7 +567,7 @@
 				resume-seqs = "reset";
 				resume-seq-types = "gpio";
 				/* from XCLR to first i2c */
-				resume-seq-delays-us = <2000>;
+				resume-seq-delays-us = <5000>;
 
 				/* suspend sequence */
 				suspend-seqs = "reset";
