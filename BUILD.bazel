@@ -16,7 +16,7 @@ load(
     "merged_kernel_uapi_headers",
 )
 load(
-    "//private/google-modules/soc/gs:device_build_configs.bzl",
+    "//private/devices/google/common:device_build_configs.bzl",
     "device_build_configs",
     "extracted_system_dlkm",
     "lto_dependant_kernel_module",
@@ -31,8 +31,8 @@ device_build_configs(
 filegroup(
     name = "gki_aarch64_boot_lz4",
     srcs = select({
-        "//private/google-modules/soc/gs:gki_aosp": ["//aosp:kernel_aarch64_gki_artifacts_download_or_build"],
-        "//private/google-modules/soc/gs:gki_aosp_staging": ["//aosp-staging:kernel_aarch64_gki_artifacts_download_or_build"],
+        "//private/devices/google/common:gki_aosp": ["//aosp:kernel_aarch64_gki_artifacts_download_or_build"],
+        "//private/devices/google/common:gki_aosp_staging": ["//aosp-staging:kernel_aarch64_gki_artifacts_download_or_build"],
     }),
 )
 
@@ -224,6 +224,7 @@ kernel_build(
         "caimito*.fragment",
     ]) + [
         # keep sorted
+        "//private/devices/google/common:debug_build_configs",
         "//private/google-modules/bms/misc:bms-misc.kconfig",
         "//private/google-modules/display/common:common.kconfig",
         "//private/google-modules/display/samsung:display.samsung.kconfig",
@@ -232,14 +233,6 @@ kernel_build(
         "//private/google-modules/power/reset:reset.kconfig",
         "//private/google-modules/radio/samsung/s5300:cpif.kconfig",
         "//private/google-modules/radio/samsung/s5400:cpif.kconfig",
-        "//private/google-modules/soc/gs:build.config.slider.blktest",
-        "//private/google-modules/soc/gs:build.config.slider.debug_api",
-        "//private/google-modules/soc/gs:build.config.slider.debug_kmemleak",
-        "//private/google-modules/soc/gs:build.config.slider.debug_locking",
-        "//private/google-modules/soc/gs:build.config.slider.debug_memory",
-        "//private/google-modules/soc/gs:build.config.slider.debug_memory_accounting",
-        "//private/google-modules/soc/gs:build.config.slider.kasan",
-        "//private/google-modules/soc/gs:build.config.slider.khwasan",
         "//private/google-modules/soc/gs:build.config.zumapro",
         "//private/google-modules/soc/gs:gs_soc.kconfig",
         "//private/google-modules/touch/common:touch.common.kconfig",
@@ -248,8 +241,8 @@ kernel_build(
         "//private/google-modules/trusty:trusty.kconfig",
         "//private/google-modules/wlan/wlan_ptracker:wlan_ptracker.kconfig",
     ] + select({
-        "//private/google-modules/soc/gs:gki_aosp": ["//aosp:kernel_aarch64_sources"],
-        "//private/google-modules/soc/gs:gki_aosp_staging": ["//aosp-staging:kernel_aarch64_sources"],
+        "//private/devices/google/common:gki_aosp": ["//aosp:kernel_aarch64_sources"],
+        "//private/devices/google/common:gki_aosp_staging": ["//aosp-staging:kernel_aarch64_sources"],
     }),
     outs = ["google/google-dts-base/zuma-{}.dtb".format(soc_rev) for soc_rev in ZUMA_SOC_REVS] +
            ["google/google-dts-base/zumapro-{}.dtb".format(soc_rev) for soc_rev in ZUMAPRO_SOC_REVS] +
@@ -257,20 +250,20 @@ kernel_build(
            _ZUMA_CAIMITO_DPM_DTBOS + _ZUMAPRO_CAIMITO_DPM_DTBOS,
     # TODO(b/221278445): Use real GKI
     base_kernel = select({
-        "//private/google-modules/soc/gs:gki_aosp": "//aosp:kernel_aarch64_download_or_build",
-        "//private/google-modules/soc/gs:gki_aosp_staging": "//aosp-staging:kernel_aarch64_download_or_build",
+        "//private/devices/google/common:gki_aosp": "//aosp:kernel_aarch64_download_or_build",
+        "//private/devices/google/common:gki_aosp_staging": "//aosp-staging:kernel_aarch64_download_or_build",
     }),
     build_config = ":device_build_config",
     collect_unstripped_modules = True,
     defconfig_fragments = select({
-        "//private/google-modules/soc/gs:kunit_enabled": ["kunit_defconfig"],
+        "//private/devices/google/common:kunit_enabled": ["kunit_defconfig"],
         "//conditions:default": [],
     }),
     dtstree = "//private/devices/google/caimito/dts:caimito.dt",
     kconfig_ext = "//private/google-modules/soc/gs:Kconfig.ext",
     kmi_symbol_list = select({
-        "//private/google-modules/soc/gs:gki_aosp": "//aosp:android/abi_gki_aarch64_pixel",
-        "//private/google-modules/soc/gs:gki_aosp_staging": "//aosp-staging:android/abi_gki_aarch64_pixel",
+        "//private/devices/google/common:gki_aosp": "//aosp:android/abi_gki_aarch64_pixel",
+        "//private/devices/google/common:gki_aosp_staging": "//aosp-staging:android/abi_gki_aarch64_pixel",
     }),
     make_goals = _PIXEL_MAKE_GOALS,
     module_outs = [
@@ -512,8 +505,8 @@ write_file(
 kernel_images(
     name = "zumapro_caimito_images",
     base_kernel_images = select({
-        "//private/google-modules/soc/gs:gki_aosp": "//aosp:kernel_aarch64_images_download_or_build",
-        "//private/google-modules/soc/gs:gki_aosp_staging": "//aosp-staging:kernel_aarch64_images_download_or_build",
+        "//private/devices/google/common:gki_aosp": "//aosp:kernel_aarch64_images_download_or_build",
+        "//private/devices/google/common:gki_aosp_staging": "//aosp-staging:kernel_aarch64_images_download_or_build",
     }),
     boot_image_outs = ["dtb.img"],
     build_boot = False,
@@ -587,12 +580,12 @@ _zumapro_caimito_dist_targets = [
     ":insmod_cfgs",
     ":zuma_caimito_extracted_system_dlkm",
 ] + select({
-    "//private/google-modules/soc/gs:gki_aosp": [
+    "//private/devices/google/common:gki_aosp": [
         "//aosp:android/abi_gki_aarch64_pixel",
         "//aosp:kernel_aarch64_download_or_build",
         "//aosp:kernel_aarch64_headers_download_or_build",
     ],
-    "//private/google-modules/soc/gs:gki_aosp_staging": [
+    "//private/devices/google/common:gki_aosp_staging": [
         "//aosp-staging:android/abi_gki_aarch64_pixel",
         "//aosp-staging:kernel_aarch64_download_or_build",
         "//aosp-staging:kernel_aarch64_headers_download_or_build",
@@ -603,8 +596,8 @@ extracted_system_dlkm(
     name = "zuma_caimito_extracted_system_dlkm",
     gki_modules = [paths.basename(m) for m in _GKI_MODULES],
     images = select({
-        "//private/google-modules/soc/gs:gki_aosp": "//aosp:kernel_aarch64_images_download_or_build",
-        "//private/google-modules/soc/gs:gki_aosp_staging": "//aosp-staging:kernel_aarch64_images_download_or_build",
+        "//private/devices/google/common:gki_aosp": "//aosp:kernel_aarch64_images_download_or_build",
+        "//private/devices/google/common:gki_aosp_staging": "//aosp-staging:kernel_aarch64_images_download_or_build",
     }),
 )
 
