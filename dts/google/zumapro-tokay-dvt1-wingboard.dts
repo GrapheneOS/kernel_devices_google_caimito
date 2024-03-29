@@ -15,6 +15,7 @@
 #include "google-dts-base/zumapro-phone-ignss.dtsi"
 #include "zumapro-wingboard-charging.dtsi"
 #include "zumapro-wingboard-battery.dtsi"
+#include "zumapro-caimito-cp-features.dtsi"
 
 / {
 	board_id = <0x60a04>;
