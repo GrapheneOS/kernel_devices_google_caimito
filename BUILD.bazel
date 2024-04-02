@@ -403,6 +403,7 @@ lto_dependant_kernel_module(
         "drivers/soc/google/hardlockup-debug.ko",
         "drivers/soc/google/hardlockup-watchdog.ko",
         "drivers/soc/google/kernel-top.ko",
+        "drivers/soc/google/pa_kill/pa_kill.ko",
         "drivers/soc/google/perf_trace_counters.ko",
         "drivers/soc/google/pixel_stat/mm/pixel_stat_mm.ko",
         "drivers/soc/google/pixel_stat/pixel_stat_sysfs.ko",
