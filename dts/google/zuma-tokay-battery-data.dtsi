@@ -119,10 +119,10 @@ max77779,config {
 		>;
 	};
 
-	/* BC79_2mOhm_3524(4.5V)_ATL_RC2_Ver2.txt, b/315443531#comment1 */
+	/* BC79_2mOhm_3524(4.5V)_ATL_RC2_Ver3.txt, b/332385584#comment3 */
 	max77779,atl-1k-4500mv {
 		max77779,batt-id-kohm = <17>;
-		max77779,model-version = <3>;
+		max77779,model-version = <4>;
 		max77779,force-reset-model-data;
 		max77779,fg-model = /bits/ 16 <
                         0xa4f0 0xb720 0xb9d0 0xbaf0 0xbca0 0xbe70 0xbfa0 0xc260
@@ -132,7 +132,7 @@ max77779,config {
 		>;
 		max77779,fg-params = /bits/ 16 <
 			/* 0x00C0 */	0xc1b0	/* nNVCfg0 */
-			/* 0x00B6 */	0x043c	/* RelaxCFG */
+			/* 0x00B6 */	0x083b	/* RelaxCFG */
 			/* 0x009F */	0x260e	/* nLearnCFG */
 			/* 0x000C */	0x4207	/* Config */
 			/* 0x00AB */	0x0080	/* Config2 */
@@ -156,10 +156,10 @@ max77779,config {
 		>;
 	};
 
-	/* BC79_2mOhm_3525(4.5V)_COS_RC2_Ver2.txt, b/315443531#comment1 */
+	/* BC79_2mOhm_3525(4.5V)_COS_RC2_Ver3.txt, b/332385584#comment3 */
 	max77779,cos-2k-4500mv {
 		max77779,batt-id-kohm = <18>;
-		max77779,model-version = <3>;
+		max77779,model-version = <4>;
 		max77779,force-reset-model-data;
 		max77779,fg-model = /bits/ 16 <
                         0xa4f0 0xb720 0xb8b0 0xba40 0xbd00 0xbe60 0xbfa0 0xc120
@@ -169,7 +169,7 @@ max77779,config {
 		>;
 		max77779,fg-params = /bits/ 16 <
 			/* 0x00C0 */	0xc1b0	/* nNVCfg0 */
-			/* 0x00B6 */	0x043c	/* RelaxCFG */
+			/* 0x00B6 */	0x083b	/* RelaxCFG */
 			/* 0x009F */	0x260e	/* nLearnCFG */
 			/* 0x000C */	0x4207	/* Config */
 			/* 0x00AB */	0x0080	/* Config2 */
@@ -193,10 +193,10 @@ max77779,config {
 		>;
 	};
 
-	/* BC79_2mOhm_3526(4.5V)_LWN_RC2_Ver2.txt, b/315443531#comment1 */
+	/* BC79_2mOhm_3526(4.5V)_LWN_RC2_Ver3.txt, b/332385584#comment3 */
 	max77779,lwn-4k-4500mv {
 		max77779,batt-id-kohm = <20>;
-		max77779,model-version = <3>;
+		max77779,model-version = <4>;
 		max77779,force-reset-model-data;
 		max77779,fg-model = /bits/ 16 <
                         0xa510 0xb7b0 0xb990 0xbaa0 0xbbf0 0xbd80 0xbe80 0xbfb0
@@ -206,7 +206,7 @@ max77779,config {
 		>;
 		max77779,fg-params = /bits/ 16 <
 			/* 0x00C0 */	0xc1b0	/* nNVCfg0 */
-			/* 0x00B6 */	0x043c	/* RelaxCFG */
+			/* 0x00B6 */	0x083b	/* RelaxCFG */
 			/* 0x009F */	0x260e	/* nLearnCFG */
 			/* 0x000C */	0x4207	/* Config */
 			/* 0x00AB */	0x0080	/* Config2 */
