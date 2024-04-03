@@ -8,13 +8,10 @@
 
 max77779,config {
 
-	/*
-	 * b/330175187#comment18
-	 * 3501_1_020924_BC79_RC2_updated_send_googlemod.raw.model.ini.txt.overlay
-	 */
+	/* 3501_1_040224_BC79_RC2_updated_send_googlemod.raw.model.ini, b/332393177#comment5 */
 	max77779,atl-1k {
 		max77779,batt-id-kohm = <1>;
-		max77779,model-version = <8>;
+		max77779,model-version = <9>;
 		max77779,force-reset-model-data;
 		max77779,fg-model = /bits/ 16 <
 			0x96b0 0xad50 0xb320 0xb940 0xbae0 0xbce0 0xbe50 0xbfa0
@@ -24,7 +21,7 @@ max77779,config {
 		>;
 		max77779,fg-params = /bits/ 16 <
 			/* 0x00C0 */    0xc1b0  /* nnvcfg0 */
-			/* 0x00B6 */    0x083c  /* nrelaxcfg */
+			/* 0x00B6 */    0x083b  /* nrelaxcfg */
 			/* 0x009F */    0x660e  /* nLearnCFG */
 			/* 0x000C */    0x4207  /* Config */
 			/* 0x00AB */    0x0081  /* Config2 */
