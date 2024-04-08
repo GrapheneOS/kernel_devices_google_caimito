@@ -118,6 +118,7 @@
 		goog,v4l2-enabled;
 		goog,offload-enabled;
 		goog,lptw-suppress-coords-enabled;
+		goog,reset-after-selftest;
 
 		controller-data {
 			samsung,spi-feedback-delay = <0>;
