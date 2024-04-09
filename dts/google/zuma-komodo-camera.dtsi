@@ -254,7 +254,7 @@
 
 		/* SPI config */
 		reg = <0>;
-		spi-max-frequency = <20000000>;
+		spi-max-frequency = <3000000>;
 		spi-cpol;
 		spi-cpha;
 
@@ -298,7 +298,10 @@
 			 1000>;
 
 		/* Thread priority */
-		transaction-thread-priority = <99>;
+		/* This is made to be lower than image sensor's thread */
+		/* thread priority to allow uninterrupted image sensor */
+		/* operation during periods of high CPU contention. */
+		transaction-thread-priority = <98>;
 
 		controller-data {
 			samsung,spi-feedback-delay = <0>;
