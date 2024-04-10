@@ -173,7 +173,6 @@ kernel_module_group(
     srcs = [
         # keep sorted
         "//private/devices/google/caimito:zumapro_soc.caimito",
-        "//private/devices/google/caimito/display:drm_panel.google",
         "//private/google-modules/amplifiers/audiometrics",
         "//private/google-modules/amplifiers/cs35l41",
         "//private/google-modules/amplifiers/cs40l26",
@@ -187,6 +186,11 @@ kernel_module_group(
         "//private/google-modules/display/common/gs_drm",
         "//private/google-modules/display/common/gs_panel",
         "//private/google-modules/display/common/panels",
+        "//private/google-modules/display/panels/caimito:panel-gs-cm4",
+        "//private/google-modules/display/panels/caimito:panel-gs-km4",
+        "//private/google-modules/display/panels/caimito:panel-gs-tk4a",
+        "//private/google-modules/display/panels/caimito:panel-gs-tk4b",
+        "//private/google-modules/display/panels/caimito:panel-gs-tk4c",
         "//private/google-modules/display/samsung:display.samsung",
         "//private/google-modules/edgetpu/rio/drivers/edgetpu:edgetpu.rio",
         "//private/google-modules/fingerprint/fpc",
