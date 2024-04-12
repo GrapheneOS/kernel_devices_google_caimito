@@ -36,10 +36,10 @@
 	batoilo2_bat_open_to = <0x3>;   /* 12ms */
 	batoilo_rel = <0x2>;   /* 1ms */
 	batoilo2_rel = <0x2>;   /* 1ms */
-	batoilo_det = <0x0>;   /* 0ms */
-	batoilo2_det = <0x0>;   /* 0ms */
-	uvlo1_rel = <0x2>;   /* 10ms */
-	uvlo2_rel = <0x2>;   /* 10ms */
+	batoilo_det = <0x1>;   /* 30us */
+	batoilo2_det = <0x1>;   /* 30us */
+	uvlo1_rel = <0x1>;   /* 1ms */
+	uvlo2_rel = <0x1>;   /* 1ms */
 	uvlo1_det = <0x1>;   /* 30us */
 	uvlo2_det = <0x1>;   /* 30us */
 	evt_cnt_enable = <0x1>;
