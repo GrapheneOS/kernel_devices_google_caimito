@@ -113,6 +113,7 @@
 		synaptics,udfps-coords = <720 2360>;
 		synaptics,dynamic-report-rate;
 */
+		goog,coord-filter-enabled;
 		goog,tbn-enabled;
 		goog,manual-heatmap-from-irq;
 		goog,v4l2-enabled;
