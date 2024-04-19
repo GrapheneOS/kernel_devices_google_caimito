@@ -596,6 +596,9 @@ _zumapro_caimito_dist_targets = [
         "//aosp-staging:kernel_aarch64_download_or_build",
         "//aosp-staging:kernel_aarch64_headers_download_or_build",
     ],
+}) + select({
+    "//private/devices/google/common:enable_download_fips140": ["@gki_prebuilt_fips140//fips140.ko"],
+    "//private/devices/google/common:disable_download_fips140": [],
 })
 
 extracted_system_dlkm(
