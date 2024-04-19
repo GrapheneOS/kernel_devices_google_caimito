@@ -29,6 +29,7 @@
 	google,ttf-soc-table =  <52 72 85 89 93  95  97  100>;
 	google,ttf-elap-table = <24 47 65 82 121 170 222 116>;
 	google,ttf-tier-table = <0 51 76>;
+	google,ttf-report-max-ratio = <0>;
 
 	google,batt-id-1-atl {
 		google,batt-id = <1>;
