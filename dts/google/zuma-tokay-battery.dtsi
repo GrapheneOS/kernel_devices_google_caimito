@@ -28,6 +28,7 @@
 	google,ttf-soc-table =  <71 80 89 93  98  100>;
 	google,ttf-elap-table = <32 50 80 110 200 81>;
 	google,ttf-tier-table = <0 79 86>;
+	google,ttf-report-max-ratio = <0>;
 
 #ifdef ZUMA_BMS_ENABLE_CHG_PROFILE_SWITCH
 	google,enable-switch-chg-profile;
