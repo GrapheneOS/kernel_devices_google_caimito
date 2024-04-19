@@ -32,6 +32,9 @@
 					label = "google-tk4a";
 					channel = <0>;
 					touch = <&spitouch>;
+					vddd-normal-microvolt = <1150000>;
+					vddd-lp-microvolt     = <1062500>;
+					post-vddd-lp;
 
 					/* reset, power */
 					reset-gpios = <&gpp0 0 GPIO_ACTIVE_HIGH>;
@@ -46,6 +49,9 @@
 					label = "google-tk4c";
 					channel = <0>;
 					touch = <&spitouch>;
+					vddd-normal-microvolt = <1150000>;
+					vddd-lp-microvolt     = <1062500>;
+					post-vddd-lp;
 
 					/* reset, power */
 					reset-gpios = <&gpp0 0 GPIO_ACTIVE_HIGH>;
@@ -61,6 +67,9 @@
 					label = "google-tk4b";
 					channel = <0>;
 					touch = <&spitouch>;
+					vddd-normal-microvolt = <1150000>;
+					vddd-lp-microvolt     = <1062500>;
+					post-vddd-lp;
 
 					/* reset, power */
 					reset-gpios = <&gpp0 0 GPIO_ACTIVE_HIGH>;
