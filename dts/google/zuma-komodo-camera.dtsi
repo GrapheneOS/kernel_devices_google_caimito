@@ -298,10 +298,13 @@
 			 1000>;
 
 		/* Thread priority */
-		/* This is made to be lower than image sensor's thread */
+		/* A slower TOF bus speed leads to higher CPU usage. */
+		/* This is therefore made to be lower than image sensor's */
 		/* thread priority to allow uninterrupted image sensor */
 		/* operation during periods of high CPU contention. */
-		transaction-thread-priority = <98>;
+		/* Other real-time threads are also prioritized over */
+		/* TOF as well. */
+		transaction-thread-priority = <100>;
 
 		controller-data {
 			samsung,spi-feedback-delay = <0>;
