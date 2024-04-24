@@ -17,6 +17,7 @@
 };
 
 &max77759tcpc {
+	bcl-usb-voting;
 	pinctrl-0 = <&usb_pd_irq>;
 	pullup-supply = <&m_ldo19_reg>;
 	connector {
