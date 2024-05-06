@@ -8,6 +8,7 @@
 /dts-v1/;
 /plugin/;
 
+#define ZUMA_TOKAY_WINGBOARD_CAMERA
 #include "zumapro-caimito-common.dtsi"
 #include "zumapro-tokay-common.dtsi"
 #include "zuma-tokay-4_5V-battery.dtsi"
