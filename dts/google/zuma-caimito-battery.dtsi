@@ -23,6 +23,7 @@
 &google_battery {
 	google,fg-psy-name = "max77779fg";
 	google,batt-voltage-critical = <3250000>;
+	google,vbatt-crit-deadline-sec = <100>;
 };
 
 &hsi2c6_bus {
