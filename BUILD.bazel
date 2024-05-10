@@ -229,6 +229,7 @@ kernel_build(
     ]) + [
         # keep sorted
         "//private/devices/google/common:debug_build_configs",
+        "//private/devices/google/zumapro:build.config.zumapro",
         "//private/google-modules/bms/misc:bms-misc.kconfig",
         "//private/google-modules/display/common:common.kconfig",
         "//private/google-modules/display/samsung:display.samsung.kconfig",
@@ -237,7 +238,6 @@ kernel_build(
         "//private/google-modules/power/reset:reset.kconfig",
         "//private/google-modules/radio/samsung/s5300:cpif.kconfig",
         "//private/google-modules/radio/samsung/s5400:cpif.kconfig",
-        "//private/google-modules/soc/gs:build.config.zumapro",
         "//private/google-modules/soc/gs:gs_soc.kconfig",
         "//private/google-modules/touch/common:touch.common.kconfig",
         "//private/google-modules/touch/fts/ftm5:ftm5.kconfig",
@@ -488,14 +488,14 @@ hermetic_genrule(
     name = "vendor_kernel_boot_modules.caimito-cat",
     srcs = [
         "vendor_kernel_boot_modules.caimito",
-        "//private/google-modules/soc/gs:vendor_kernel_boot_modules.zumapro",
+        "//private/devices/google/zumapro:vendor_kernel_boot_modules.zumapro",
     ],
     outs = [
         "vendor_kernel_boot_modules.concat",
     ],
     cmd = """
         cat $(location vendor_kernel_boot_modules.caimito) \\
-            $(location //private/google-modules/soc/gs:vendor_kernel_boot_modules.zumapro) \\
+            $(location //private/devices/google/zumapro:vendor_kernel_boot_modules.zumapro) \\
             > $@
     """,
 )
@@ -530,12 +530,12 @@ kernel_images(
     # Keep the following in sync with build.config.caimito:
     modules_list = ":vendor_kernel_boot_modules.caimito-cat",
     system_dlkm_modules_list = ":system_dlkm_modules_list",
-    system_dlkm_props = "//private/google-modules/soc/gs:system_dlkm.props.zuma",
+    system_dlkm_props = "//private/devices/google/zuma:system_dlkm.props.zuma",
     vendor_dlkm_etc_files = ["//private/devices/google/caimito:insmod_cfgs"],
-    vendor_dlkm_modules_blocklist = "//private/google-modules/soc/gs:vendor_dlkm.blocklist.zumapro",
+    vendor_dlkm_modules_blocklist = "//private/devices/google/zumapro:vendor_dlkm.blocklist.zumapro",
     # No MODULES_BLOCKLIST
-    vendor_dlkm_modules_list = "//private/google-modules/soc/gs:vendor_dlkm_modules.zumapro",
-    vendor_dlkm_props = "//private/google-modules/soc/gs:vendor_dlkm.props.zumapro",
+    vendor_dlkm_modules_list = "//private/devices/google/zumapro:vendor_dlkm_modules.zumapro",
+    vendor_dlkm_props = "//private/devices/google/zumapro:vendor_dlkm.props.zumapro",
     deps = [
         # Keep the following in sync with (vendor|system)_dlkm.props.zumapro:
         # selinux_fc
