@@ -56,3 +56,15 @@
 	regulator-min-microvolt = <3100000>;
 	regulator-max-microvolt = <3100000>;
 };
+
+&drmdecon0 {
+	bts_scen_name = "dpu_qurgent_default";
+	bts_scen_min_panel_width = <1280>;
+	bts_scen_min_panel_height = <2856>;
+	bts_scen_min_fps = <120>;
+	bts_scen_min_rt = <1930198>;
+	bts_scen_max_rt = <3494400>;
+	bts_scen_min_peak = <0>;
+	bts_scen_max_peak = <5553600>;
+	bts_scen_skip_with_video;
+};
