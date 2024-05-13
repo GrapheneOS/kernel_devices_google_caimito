@@ -1,9 +1,5 @@
-# KERNEL_DIR is set by the environment to the directory where the BUILD_CONFIG
-# file is located.
-DEVICE_DIR=${KERNEL_DIR}
+DEVICE_DIR=private/devices/google/caimito
 SOC_DIR=private/google-modules/soc/gs
-# Compile these modules with the GKI kernel
-KERNEL_DIR=${GKI_KERNEL_DIR:-"aosp-staging"}
 
 # These just need to be relative to the ROOT_DIR
 FRAGMENT_CONFIG=${DEVICE_DIR}/caimito_gki.fragment
