@@ -7,18 +7,18 @@
 
 #include "zumapro-board-common.dtsi"
 #include "zumapro-ripcurrentpro-bcl-sapwood.dtsi"
-#include "google-dts-base/devices/ripcurrent/zuma-ripcurrent-camera-pmic.dtsi"
-#include "google-dts-base/devices/ripcurrent/zuma-ripcurrent-camera.dtsi"
+#include "google-dts-ripcurrent/zuma-ripcurrent-camera-pmic.dtsi"
+#include "google-dts-ripcurrent/zuma-ripcurrent-camera.dtsi"
 #include "zumapro-ripcurrentpro-usb.dtsi"
 /*
 #include "zuma-24-common.dtsi"
-#include "google-dts-base/zumapro-board-gps.dtsi"
+#include "google-dts-zumapro/zumapro-board-gps.dtsi"
 #include "zuma-ripcurrent24-ultrasonic-udfps.dtsi"
 */
 
-#include "google-dts-base/devices/ripcurrent/zuma-ripcurrent-battery.dtsi"
-#include "google-dts-base/zuma-typec.dtsi"
-#include "google-dts-base/devices/ripcurrent/zuma-ripcurrent-gsa-gsc.dtsi"
+#include "google-dts-ripcurrent/zuma-ripcurrent-battery.dtsi"
+#include "google-dts-zuma/zuma-typec.dtsi"
+#include "google-dts-ripcurrent/zuma-ripcurrent-gsa-gsc.dtsi"
 
 /* Sapwood Config */
 #include "zuma-ripcurrent24-sapwood-caimito-battery.dtsi"

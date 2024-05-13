@@ -10,10 +10,10 @@
 
 #define ZUMA_BMS_ENABLE_CHG_PROFILE_SWITCH
 #include "zumapro-caimito-common.dtsi"
-#include "google-dts-base/zumapro-board-cp-s5400-sit-pre-dvt.dtsi"
+#include "google-dts-zumapro/zumapro-board-cp-s5400-sit-pre-dvt.dtsi"
 #include "zumapro-tokay-common.dtsi"
-#include "google-dts-base/zumapro-phone-gps.dtsi"
-#include "google-dts-base/max777xx-fwupdate.dtsi"
+#include "google-dts-zumapro/zumapro-phone-gps.dtsi"
+#include "google-dts-zuma/max777xx-fwupdate.dtsi"
 
 / {
 	board_id = <0x60a03>;

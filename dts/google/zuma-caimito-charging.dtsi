@@ -5,7 +5,7 @@
  * Copyright 2023 Google LLC
  *
  */
-#include "google-dts-base/zuma-charging.dtsi"
+#include "google-dts-zuma/zuma-charging.dtsi"
 
 &google_charger {
    google,thermal-stats-lvl-map = <0 8 16 25>;

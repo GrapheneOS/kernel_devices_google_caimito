@@ -6,7 +6,7 @@
  *
  */
 
-#include "google-dts-base/zuma-charging.dtsi"
+#include "google-dts-zuma/zuma-charging.dtsi"
 
 &hsi2c_9 {
 	#address-cells = <1>;
@@ -14,8 +14,8 @@
 	status = "okay";
 	clock-frequency = <400000>;
 
-	#include "google-dts-base/zuma-charge-pump-ln8411.dtsi"
-	#include "google-dts-base/zuma-charge-pump-pca9468.dtsi"
+	#include "google-dts-zuma/zuma-charge-pump-ln8411.dtsi"
+	#include "google-dts-zuma/zuma-charge-pump-pca9468.dtsi"
 };
 
 &google_charger {

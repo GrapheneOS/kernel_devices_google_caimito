@@ -74,25 +74,25 @@ _ZUMA_CAIMITO_DTBOS = [
     "google/zuma-ripcurrent24.dtbo",
     "google/zuma-ripcurrent24-sapwood-komodo-caiman.dtbo",
     "google/zuma-ripcurrent24-sapwood-tokay.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-ripcurrent.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-husky-proto1.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-husky-proto1-wingboard.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-husky-proto1_1.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-husky-evt1.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-husky-evt1_1.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-husky-dvt1.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-husky-pvt1.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-husky-mp.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-shiba-proto1.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-shiba-proto1-wingboard.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-shiba-proto1_1.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-shiba-evt1.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-shiba-evt1_b0.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-shiba-evt1_1.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-shiba-evt1_1-wingboard.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-shiba-dvt1.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-shiba-pvt1.dtbo",
-    "google/google-dts-base/devices/ripcurrent/zuma-shiba-mp.dtbo",
+    "google/google-dts-ripcurrent/zuma-ripcurrent.dtbo",
+    "google/google-dts-ripcurrent/zuma-husky-proto1.dtbo",
+    "google/google-dts-ripcurrent/zuma-husky-proto1-wingboard.dtbo",
+    "google/google-dts-ripcurrent/zuma-husky-proto1_1.dtbo",
+    "google/google-dts-ripcurrent/zuma-husky-evt1.dtbo",
+    "google/google-dts-ripcurrent/zuma-husky-evt1_1.dtbo",
+    "google/google-dts-ripcurrent/zuma-husky-dvt1.dtbo",
+    "google/google-dts-ripcurrent/zuma-husky-pvt1.dtbo",
+    "google/google-dts-ripcurrent/zuma-husky-mp.dtbo",
+    "google/google-dts-ripcurrent/zuma-shiba-proto1.dtbo",
+    "google/google-dts-ripcurrent/zuma-shiba-proto1-wingboard.dtbo",
+    "google/google-dts-ripcurrent/zuma-shiba-proto1_1.dtbo",
+    "google/google-dts-ripcurrent/zuma-shiba-evt1.dtbo",
+    "google/google-dts-ripcurrent/zuma-shiba-evt1_b0.dtbo",
+    "google/google-dts-ripcurrent/zuma-shiba-evt1_1.dtbo",
+    "google/google-dts-ripcurrent/zuma-shiba-evt1_1-wingboard.dtbo",
+    "google/google-dts-ripcurrent/zuma-shiba-dvt1.dtbo",
+    "google/google-dts-ripcurrent/zuma-shiba-pvt1.dtbo",
+    "google/google-dts-ripcurrent/zuma-shiba-mp.dtbo",
     "google/zuma-komodo-proto1-samsung-gnss.dtbo",
     "google/zuma-komodo-proto1-broadcom-gnss.dtbo",
     "google/zuma-komodo-proto1-broadcom-gnss-mag3.dtbo",
@@ -114,9 +114,9 @@ _ZUMA_CAIMITO_DTBOS = [
 ]
 
 _ZUMA_CAIMITO_DPM_DTBOS = [
-    "google/google-dts-base/zuma-dpm-eng.dtbo",
-    "google/google-dts-base/zuma-dpm-userdebug.dtbo",
-    "google/google-dts-base/zuma-dpm-user.dtbo",
+    "google/google-dts-zuma/zuma-dpm-eng.dtbo",
+    "google/google-dts-zuma/zuma-dpm-userdebug.dtbo",
+    "google/google-dts-zuma/zuma-dpm-user.dtbo",
 ]
 
 # zumapro dtbo
@@ -163,9 +163,9 @@ _ZUMAPRO_CAIMITO_DTBOS = [
 ]
 
 _ZUMAPRO_CAIMITO_DPM_DTBOS = [
-    "google/google-dts-base/zumapro-dpm-eng.dtbo",
-    "google/google-dts-base/zumapro-dpm-userdebug.dtbo",
-    "google/google-dts-base/zumapro-dpm-user.dtbo",
+    "google/google-dts-zumapro/zumapro-dpm-eng.dtbo",
+    "google/google-dts-zumapro/zumapro-dpm-userdebug.dtbo",
+    "google/google-dts-zumapro/zumapro-dpm-user.dtbo",
 ]
 
 kernel_module_group(
@@ -248,8 +248,8 @@ kernel_build(
         "//private/devices/google/common:gki_aosp": ["//aosp:kernel_aarch64_sources"],
         "//private/devices/google/common:gki_aosp_staging": ["//aosp-staging:kernel_aarch64_sources"],
     }),
-    outs = ["google/google-dts-base/zuma-{}.dtb".format(soc_rev) for soc_rev in ZUMA_SOC_REVS] +
-           ["google/google-dts-base/zumapro-{}.dtb".format(soc_rev) for soc_rev in ZUMAPRO_SOC_REVS] +
+    outs = ["google/google-dts-zuma/zuma-{}.dtb".format(soc_rev) for soc_rev in ZUMA_SOC_REVS] +
+           ["google/google-dts-zumapro/zumapro-{}.dtb".format(soc_rev) for soc_rev in ZUMAPRO_SOC_REVS] +
            _ZUMA_CAIMITO_DTBOS + _ZUMAPRO_CAIMITO_DTBOS +
            _ZUMA_CAIMITO_DPM_DTBOS + _ZUMAPRO_CAIMITO_DPM_DTBOS,
     # TODO(b/221278445): Use real GKI

@@ -6,7 +6,7 @@
  *		https://www.google.com
  */
 
-#include "google-dts-base/zumapro-board-bcl.dtsi"
+#include "google-dts-zumapro/zumapro-board-bcl.dtsi"
 
 &google_mitigation {
 	google,ifpmic = <M77759>;

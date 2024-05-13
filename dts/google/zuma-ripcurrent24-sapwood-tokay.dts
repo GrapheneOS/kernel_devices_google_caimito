@@ -10,7 +10,7 @@
 
 #include "zuma-ripcurrent24-sapwood-caimito-common.dtsi"
 #include "zuma-ripcurrent24-sapwood-tokay-charging.dtsi"
-#include "google-dts-base/zumapro-board-gps.dtsi"
+#include "google-dts-zumapro/zumapro-board-gps.dtsi"
 #include "zuma-ripcurrent24-ultrasonic-udfps.dtsi"
 #include "zuma-tokay-wcharger.dtsi"
 #include "zuma-tokay-usecases.dtsi"

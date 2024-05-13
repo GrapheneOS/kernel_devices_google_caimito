@@ -13,7 +13,7 @@
 #define ESIM_NO_CHIP_ENABLE_PIN
 #include "zuma-caimito-common.dtsi"
 #include "zuma-caiman-common.dtsi"
-#include "google-dts-base/zumapro-phone-gps.dtsi"
+#include "google-dts-zumapro/zumapro-phone-gps.dtsi"
 #include "zuma-caimito-wifi-4390a0.dtsi"
 
 / {

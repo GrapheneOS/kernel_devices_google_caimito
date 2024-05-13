@@ -10,7 +10,7 @@
 
 #include "zuma-caimito-common.dtsi"
 #include "zuma-tokay-common.dtsi"
-#include "google-dts-base/zumapro-phone-gps.dtsi"
+#include "google-dts-zumapro/zumapro-phone-gps.dtsi"
 #include "zuma-tokay-wifi-4390a0.dtsi"
 
 / {
