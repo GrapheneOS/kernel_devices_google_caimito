@@ -539,8 +539,7 @@ kernel_images(
     deps = [
         # Keep the following in sync with (vendor|system)_dlkm.props.zumapro:
         # selinux_fc
-        "//prebuilts/boot-artifacts/selinux:file_contexts",
-        "//prebuilts/boot-artifacts/selinux:system_file_contexts",
+        "//private/devices/google/common:sepolicy",
     ],
 )
 
