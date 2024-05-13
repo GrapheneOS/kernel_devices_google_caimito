@@ -13,7 +13,7 @@
 	#address-cells = <1>;
 	#size-cells = <0>;
 	status = "okay";
-#include "google-dts-base/max777x9-tcpc.dtsi"
+#include "google-dts-zuma/max777x9-tcpc.dtsi"
 };
 
 &max77759tcpc {
@@ -46,4 +46,4 @@
 	};
 };
 
-#include "google-dts-base/max777x9-usbc-cooling-dev.dtsi"
+#include "google-dts-zuma/max777x9-usbc-cooling-dev.dtsi"

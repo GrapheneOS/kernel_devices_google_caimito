@@ -10,9 +10,9 @@
 
 #define ZUMA_BMS_PROTO_EVT10_MODEL
 #include "zumapro-caimito-common.dtsi"
-#include "google-dts-base/zumapro-board-cp-s5400-sit-pre-dvt.dtsi"
+#include "google-dts-zumapro/zumapro-board-cp-s5400-sit-pre-dvt.dtsi"
 #include "zumapro-komodo-common.dtsi"
-#include "google-dts-base/zuma-cp-s5400-phone-gnss.dtsi"
+#include "google-dts-zuma/zuma-cp-s5400-phone-gnss.dtsi"
 #include "zuma-caimito-gnss-samsung.dtsi"
 #include "zumapro-komodo-wifi-4390a0.dtsi"
 

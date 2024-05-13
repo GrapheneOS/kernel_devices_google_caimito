@@ -10,26 +10,26 @@
 
 
 #include "zumapro-board-common.dtsi"
-#include "google-dts-base/devices/ripcurrent/zuma-ripcurrent-camera-pmic.dtsi"
-#include "google-dts-base/devices/ripcurrent/zuma-ripcurrent-camera.dtsi"
+#include "google-dts-ripcurrent/zuma-ripcurrent-camera-pmic.dtsi"
+#include "google-dts-ripcurrent/zuma-ripcurrent-camera.dtsi"
 #include "zumapro-ripcurrentpro-usb.dtsi"
 /*
 #include "zuma-24-common.dtsi"
 #include "zuma-ripcurrent24-ultrasonic-udfps.dtsi"
 */
 
-#include "google-dts-base/devices/ripcurrent/zuma-ripcurrent-battery.dtsi"
+#include "google-dts-ripcurrent/zuma-ripcurrent-battery.dtsi"
 #include "zuma-ripcurrent24-battery.dtsi"
-#include "google-dts-base/devices/ripcurrent/zuma-ripcurrent-charging.dtsi"
-#include "google-dts-base/devices/ripcurrent/zuma-ripcurrent-usecases.dtsi"
-#include "google-dts-base/devices/ripcurrent/zuma-ripcurrent-wcharger.dtsi"
-#include "google-dts-base/zuma-typec.dtsi"
-#include "google-dts-base/devices/ripcurrent/zuma-ripcurrent-typec.dtsi"
-#include "google-dts-base/devices/ripcurrent/zuma-ripcurrent-gsa-gsc.dtsi"
-#include "google-dts-base/zumapro-board-bluetooth_legacy.dtsi"
-#include "google-dts-base/zumapro-board-ignss.dtsi"
-#include "google-dts-base/zuma-board-nfc.dtsi"
-#include "google-dts-base/zuma-board-ese.dtsi"
+#include "google-dts-ripcurrent/zuma-ripcurrent-charging.dtsi"
+#include "google-dts-ripcurrent/zuma-ripcurrent-usecases.dtsi"
+#include "google-dts-ripcurrent/zuma-ripcurrent-wcharger.dtsi"
+#include "google-dts-zuma/zuma-typec.dtsi"
+#include "google-dts-ripcurrent/zuma-ripcurrent-typec.dtsi"
+#include "google-dts-ripcurrent/zuma-ripcurrent-gsa-gsc.dtsi"
+#include "google-dts-zumapro/zumapro-board-bluetooth_legacy.dtsi"
+#include "google-dts-zumapro/zumapro-board-ignss.dtsi"
+#include "google-dts-zuma/zuma-board-nfc.dtsi"
+#include "google-dts-zuma/zuma-board-ese.dtsi"
 #include "zumapro-ripcurrentpro-bcl-muirwood.dtsi"
 
 

@@ -7,7 +7,7 @@
  */
 
 #include "zuma-ripcurrent24-battery.dtsi"
-#include "google-dts-base/zuma-max777xx_fwupdate.dtsi"
+#include "google-dts-zuma/zuma-max777xx_fwupdate.dtsi"
 
 &google_battery {
 	google,fg-psy-name = "max77779fg";
@@ -44,7 +44,7 @@
 &max77779_fg {
 	maxim,fg-data {
 		#include "zuma-komodo-battery-data.dtsi"
-		#include "google-dts-base/zuma-1p5c-battery-data.dtsi"
+		#include "google-dts-zuma/zuma-1p5c-battery-data.dtsi"
 	};
 };
 

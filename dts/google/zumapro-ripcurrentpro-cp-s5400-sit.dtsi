@@ -6,7 +6,7 @@
  *             http://www.samsung.com
  */
 
-#include "google-dts-base/zuma-board-cp-s5300-sit.dtsi"
+#include "google-dts-zuma/zuma-board-cp-s5300-sit.dtsi"
 
 / {
 	fragment@modemif {

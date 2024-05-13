@@ -5,25 +5,25 @@ zuma_caimito_overlays := \
 	zuma-ripcurrent24.dtbo \
 	zuma-ripcurrent24-sapwood-komodo-caiman.dtbo \
 	zuma-ripcurrent24-sapwood-tokay.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-ripcurrent.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-husky-proto1.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-husky-proto1-wingboard.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-husky-proto1_1.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-husky-evt1.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-husky-evt1_1.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-husky-dvt1.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-husky-pvt1.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-husky-mp.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-shiba-proto1.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-shiba-proto1-wingboard.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-shiba-proto1_1.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-shiba-evt1.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-shiba-evt1_b0.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-shiba-evt1_1.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-shiba-evt1_1-wingboard.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-shiba-dvt1.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-shiba-pvt1.dtbo \
-	google-dts-base/devices/ripcurrent/zuma-shiba-mp.dtbo \
+	google-dts-ripcurrent/zuma-ripcurrent.dtbo \
+	google-dts-ripcurrent/zuma-husky-proto1.dtbo \
+	google-dts-ripcurrent/zuma-husky-proto1-wingboard.dtbo \
+	google-dts-ripcurrent/zuma-husky-proto1_1.dtbo \
+	google-dts-ripcurrent/zuma-husky-evt1.dtbo \
+	google-dts-ripcurrent/zuma-husky-evt1_1.dtbo \
+	google-dts-ripcurrent/zuma-husky-dvt1.dtbo \
+	google-dts-ripcurrent/zuma-husky-pvt1.dtbo \
+	google-dts-ripcurrent/zuma-husky-mp.dtbo \
+	google-dts-ripcurrent/zuma-shiba-proto1.dtbo \
+	google-dts-ripcurrent/zuma-shiba-proto1-wingboard.dtbo \
+	google-dts-ripcurrent/zuma-shiba-proto1_1.dtbo \
+	google-dts-ripcurrent/zuma-shiba-evt1.dtbo \
+	google-dts-ripcurrent/zuma-shiba-evt1_b0.dtbo \
+	google-dts-ripcurrent/zuma-shiba-evt1_1.dtbo \
+	google-dts-ripcurrent/zuma-shiba-evt1_1-wingboard.dtbo \
+	google-dts-ripcurrent/zuma-shiba-dvt1.dtbo \
+	google-dts-ripcurrent/zuma-shiba-pvt1.dtbo \
+	google-dts-ripcurrent/zuma-shiba-mp.dtbo \
 	zuma-komodo-proto1-samsung-gnss.dtbo \
 	zuma-komodo-proto1-broadcom-gnss.dtbo \
 	zuma-komodo-proto1-broadcom-gnss-mag3.dtbo \
@@ -45,16 +45,16 @@ zuma_caimito_overlays := \
 
 # zuma dtb
 zuma_caimito_dtbs := \
-	google-dts-base/zuma-a0-foplp.dtb \
-	google-dts-base/zuma-a0-ipop.dtb \
-	google-dts-base/zuma-b0-foplp.dtb \
-	google-dts-base/zuma-b0-ipop.dtb
+	google-dts-zuma/zuma-a0-foplp.dtb \
+	google-dts-zuma/zuma-a0-ipop.dtb \
+	google-dts-zuma/zuma-b0-foplp.dtb \
+	google-dts-zuma/zuma-b0-ipop.dtb
 
 # DPM overlays
 zuma_caimito_overlays += \
-	google-dts-base/zuma-dpm-eng.dtbo \
-	google-dts-base/zuma-dpm-userdebug.dtbo \
-	google-dts-base/zuma-dpm-user.dtbo
+	google-dts-zuma/zuma-dpm-eng.dtbo \
+	google-dts-zuma/zuma-dpm-userdebug.dtbo \
+	google-dts-zuma/zuma-dpm-user.dtbo
 
 DTC_FLAGS_zuma-dpm-eng += -a 4096
 DTC_FLAGS_zuma-dpm-user += -a 4096
@@ -104,16 +104,16 @@ zumapro_caimito_overlays := \
 
 # zumapro dtb
 zumapro_caimito_dtbs := \
-	google-dts-base/zumapro-a0-foplp.dtb \
-	google-dts-base/zumapro-a0-ipop.dtb  \
-	google-dts-base/zumapro-a1-foplp.dtb \
-	google-dts-base/zumapro-a1-ipop.dtb
+	google-dts-zumapro/zumapro-a0-foplp.dtb \
+	google-dts-zumapro/zumapro-a0-ipop.dtb  \
+	google-dts-zumapro/zumapro-a1-foplp.dtb \
+	google-dts-zumapro/zumapro-a1-ipop.dtb
 
 # DPM overlays
 zumapro_caimito_overlays += \
-        google-dts-base/zumapro-dpm-eng.dtbo \
-        google-dts-base/zumapro-dpm-userdebug.dtbo \
-        google-dts-base/zumapro-dpm-user.dtbo
+        google-dts-zumapro/zumapro-dpm-eng.dtbo \
+        google-dts-zumapro/zumapro-dpm-userdebug.dtbo \
+        google-dts-zumapro/zumapro-dpm-user.dtbo
 
 DTC_FLAGS_zumapro-dpm-eng += -a 4096
 DTC_FLAGS_zumapro-dpm-user += -a 4096

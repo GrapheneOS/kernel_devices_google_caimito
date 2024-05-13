@@ -6,8 +6,8 @@
  *
  */
 
-#include "google-dts-base/zuma-battery.dtsi"
-#include "google-dts-base/zuma-max777xx_fwupdate.dtsi"
+#include "google-dts-zuma/zuma-battery.dtsi"
+#include "google-dts-zuma/zuma-max777xx_fwupdate.dtsi"
 
 &pinctrl_0 {
 /* [MAX77729FEWN : INTB] > IF_PMIC_IRQ_L > [XEINT_22 : SC59845XWE] */
@@ -41,7 +41,7 @@
 	clock-frequency = <950000>;
 	pinctrl-0 = <&hsi2c6_bus>;
 
-	#include "google-dts-base/zuma-max777xx.dtsi"
+	#include "google-dts-zuma/zuma-max777xx.dtsi"
 };
 
 #ifndef ZUMA_BMS_I2CM
@@ -54,14 +54,14 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&hsi2c10_bus>;
 
-	#include "google-dts-base/zuma-max777xx-eeprom.dtsi"
+	#include "google-dts-zuma/zuma-max777xx-eeprom.dtsi"
 };
 #else
 /* zuma-max777xx.dtsi must be included before this */
 &max77779_i2cm {
 	status = "okay";
 
-	#include "google-dts-base/zuma-max777xx-eeprom.dtsi"
+	#include "google-dts-zuma/zuma-max777xx-eeprom.dtsi"
 };
 #endif
 

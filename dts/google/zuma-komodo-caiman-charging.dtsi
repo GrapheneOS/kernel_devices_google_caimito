@@ -13,11 +13,11 @@
 	status = "okay";
 	clock-frequency = <400000>;
 
-	#include "google-dts-base/zuma-charge-pump-ln8411.dtsi"
+	#include "google-dts-zuma/zuma-charge-pump-ln8411.dtsi"
 };
 #else
 &max77779_i2cm {
-	#include "google-dts-base/zuma-charge-pump-ln8411.dtsi"
+	#include "google-dts-zuma/zuma-charge-pump-ln8411.dtsi"
 };
 #endif
 

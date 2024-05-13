@@ -6,7 +6,7 @@
  *
  */
 
-#include "google-dts-base/devices/ripcurrent/zuma-ripcurrent-display.dtsi"
+#include "google-dts-ripcurrent/zuma-ripcurrent-display.dtsi"
 
 &dsim_modes {
 	dsim-modes {
