@@ -257,7 +257,7 @@ kernel_build(
         "//conditions:default": [],
     }),
     dtstree = "//private/devices/google/caimito/dts:caimito.dt",
-    kconfig_ext = "//private/google-modules/soc/gs:Kconfig.ext",
+    kconfig_ext = "Kconfig.ext",
     kmi_symbol_list = "//common:android/abi_gki_aarch64_pixel",
     make_goals = _PIXEL_MAKE_GOALS,
     module_outs = [

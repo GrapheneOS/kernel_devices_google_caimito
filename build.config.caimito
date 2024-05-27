@@ -1,3 +1,5 @@
+KCONFIG_EXT_MODULES_PREFIX=../
+KCONFIG_SOC_GS_PREFIX=${KCONFIG_EXT_MODULES_PREFIX}/private/google-modules/soc/gs/
 DEVICE_DIR=private/devices/google/caimito
 SOC_DIR=private/google-modules/soc/gs
 
