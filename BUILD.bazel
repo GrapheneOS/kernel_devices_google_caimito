@@ -8,6 +8,7 @@ load(
     "//build/kernel/kleaf:kernel.bzl",
     "kernel_abi",
     "kernel_build",
+    "kernel_build_config",
     "kernel_images",
     "kernel_module_group",
     "kernel_modules_install",
@@ -17,15 +18,17 @@ load(
 load("//common:modules.bzl", "get_gki_modules_list")
 load(
     "//private/devices/google/common/kleaf:device_build_configs.bzl",
-    "device_build_configs",
     "extracted_system_dlkm",
     "lto_dependant_kernel_module",
 )
 
-device_build_configs(
-    name = "build.config.caimito",
-    base_build_config = ":build.config.caimito",
-    device_name = "caimito",
+kernel_build_config(
+    name = "caimito_build_config",
+    srcs = [
+        # do not sort
+        "//common:set_kernel_dir_build_config",
+        "build.config.caimito",
+    ],
 )
 
 filegroup(
@@ -226,7 +229,6 @@ kernel_build(
     ]) + [
         # keep sorted
         "//common:kernel_aarch64_sources",
-        "//private/devices/google/common:debug_build_configs",
         "//private/devices/google/zumapro:build.config.zumapro",
         "//private/google-modules/bms/misc:bms-misc.kconfig",
         "//private/google-modules/display/common:common.kconfig",
@@ -248,7 +250,7 @@ kernel_build(
            _ZUMA_CAIMITO_DTBOS + _ZUMAPRO_CAIMITO_DTBOS +
            _ZUMA_CAIMITO_DPM_DTBOS + _ZUMAPRO_CAIMITO_DPM_DTBOS,
     base_kernel = "//common:kernel_aarch64_download_or_build",
-    build_config = ":device_build_config",
+    build_config = ":caimito_build_config",
     collect_unstripped_modules = True,
     defconfig_fragments = select({
         "//private/devices/google/common:kunit_enabled": ["kunit_defconfig"],
