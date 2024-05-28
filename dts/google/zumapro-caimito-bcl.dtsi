@@ -45,9 +45,17 @@
 	batoilo_int_rel = <0x2>;   /* 1ms */
 	batoilo2_int_rel = <0x3>;   /* 10ms */
 	uvlo1_rel = <0x1>;   /* 1ms */
-	uvlo2_rel = <0x1>;   /* 1ms */
+	uvlo2_rel = <0x3>;   /* 100ms */
 	uvlo1_det = <0x1>;   /* 30us */
 	uvlo2_det = <0x1>;   /* 30us */
+	uvlo1_lvl = <0x6>;   /* 2.9V */
+	uvlo2_lvl = <0x4>;   /* 2.8V */
+	uvlo1_vdrp1_en;
+	uvlo2_vdrp2_en;
+	oilo1_vdrp2_en;
+	oilo2_vdrp2_en;
+	vdroop_int_mask = <0xDF>;   /* BATOILO1 only */
+	intb_int_mask = <0x0>;   /* All passed */
 	evt_cnt_enable = <0x1>;
 	evt_cnt_rate = <0x0>;   /* 16k */
 	gpios = <&gpa9 5 GPIO_ACTIVE_HIGH>,		/* VDROOP1 */
