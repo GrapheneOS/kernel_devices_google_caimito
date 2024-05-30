@@ -7,7 +7,10 @@ SOC_DIR=private/google-modules/soc/gs
 FRAGMENT_CONFIG=${DEVICE_DIR}/caimito_gki.fragment
 . ${ROOT_DIR}/private/devices/google/zumapro/build.config.zumapro
 
-DTC_INCLUDE=${ROOT_DIR}/${SOC_DIR}/include/dtc
+DTC_INCLUDE="${ROOT_DIR}/${SOC_DIR}/include/dtc \
+    ${ROOT_DIR}/${KERNEL_DIR}/include \
+    include"
+
 MKDTIMG_FLAGS="--page_size=4096 --id=/:board_id --rev=/:board_rev"
 
 BCMDHD=4390
