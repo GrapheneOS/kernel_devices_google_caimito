@@ -18,5 +18,4 @@ exec tools/bazel run \
     ${parameters} \
     --config=stamp \
     --config=caimito \
-    --config=fast \
     //private/devices/google/caimito:zumapro_caimito_dist "$@"
