@@ -37,7 +37,7 @@
 	uvlo1_det = <0x1>;   /* 30us */
 	uvlo2_det = <0x1>;   /* 30us */
 	uvlo1_lvl = <0xA>;   /* 3.1V */
-	uvlo2_lvl = <0x6>;   /* 3.0V */
+	uvlo2_lvl = <0x8>;   /* 3.0V */
 	uvlo1_vdrp1_en;
 	uvlo2_vdrp2_en;
 	oilo1_vdrp2_en;
