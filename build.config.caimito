@@ -9,7 +9,8 @@ FRAGMENT_CONFIG=${DEVICE_DIR}/caimito_gki.fragment
 
 DTC_INCLUDE="${ROOT_DIR}/${SOC_DIR}/include/dtc \
     ${ROOT_DIR}/${KERNEL_DIR}/include \
-    include"
+    include \
+    ${ROOT_DIR}/${DEVICE_DIR}/dts/google/google-dts-ripcurrent"
 
 MKDTIMG_FLAGS="--page_size=4096 --id=/:board_id --rev=/:board_rev"
 
