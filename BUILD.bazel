@@ -249,6 +249,7 @@ kernel_build(
     base_kernel = "//common:kernel_aarch64_download_or_build",
     build_config = ":caimito_build_config",
     collect_unstripped_modules = True,
+    defconfig_fragments = ["//private/devices/google/zumapro:zumapro_defconfig"],
     dtstree = "//private/devices/google/caimito/dts:caimito.dt",
     kconfig_ext = "Kconfig.ext",
     kmi_symbol_list = "//common:android/abi_gki_aarch64_pixel",
