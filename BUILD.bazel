@@ -10,17 +10,14 @@ load(
     "kernel_build",
     "kernel_build_config",
     "kernel_images",
+    "kernel_module",
     "kernel_module_group",
     "kernel_modules_install",
     "kernel_unstripped_modules_archive",
     "merged_kernel_uapi_headers",
 )
 load("//common:modules.bzl", "get_gki_modules_list")
-load(
-    "//private/devices/google/common/kleaf:device_build_configs.bzl",
-    "extracted_system_dlkm",
-    "lto_dependant_kernel_module",
-)
+load("//private/devices/google/common/kleaf:device.bzl", "extracted_system_dlkm")
 
 kernel_build_config(
     name = "caimito_build_config",
@@ -252,10 +249,6 @@ kernel_build(
     base_kernel = "//common:kernel_aarch64_download_or_build",
     build_config = ":caimito_build_config",
     collect_unstripped_modules = True,
-    defconfig_fragments = select({
-        "//private/devices/google/common:kunit_enabled": ["kunit_defconfig"],
-        "//conditions:default": [],
-    }),
     dtstree = "//private/devices/google/caimito/dts:caimito.dt",
     kconfig_ext = "Kconfig.ext",
     kmi_symbol_list = "//common:android/abi_gki_aarch64_pixel",
@@ -285,7 +278,7 @@ kernel_abi(
     module_grouping = False,
 )
 
-lto_dependant_kernel_module(
+kernel_module(
     name = "zumapro_soc.caimito",
     srcs = [
         "//private/google-modules/soc/gs:gs_soc_sources",
@@ -419,6 +412,7 @@ lto_dependant_kernel_module(
         "drivers/thermal/samsung/gs_thermal.ko",
         "drivers/tty/serial/exynos_tty.ko",
         "drivers/ufs/ufs-exynos-gs.ko",
+        "drivers/ufs/ufs-pixel-fips140.ko",
         "drivers/usb/dwc3/dwc3-exynos-usb.ko",
         "drivers/usb/gadget/function/usb_f_dm.ko",
         "drivers/usb/gadget/function/usb_f_dm1.ko",
@@ -436,14 +430,7 @@ lto_dependant_kernel_module(
         "drivers/watchdog/s3c2410_wdt.ko",
     ],
     kernel_build = "//private/google-modules/soc/gs:gs_kernel_build",
-    lto_outs = [
-        "drivers/ufs/ufs-pixel-fips140.ko",
-    ],
     makefile = ["//private/google-modules/soc/gs:Makefile"],
-    test_outs = [
-        # TODO(b/323263169) enable this.
-        # "drivers/soc/google/gsa/gsa_test.ko"
-    ],
     visibility = [
         # keep sorted
         "//private/devices/google:__subpackages__",
