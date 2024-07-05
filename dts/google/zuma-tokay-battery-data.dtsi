@@ -11,7 +11,7 @@ max77779,config {
 	/* BC79_2mOhm_3347(4.48v)_ATL_RC2_ver3.ini, b/315443531#comment1 */
 	max77779,atl-1k {
 		max77779,batt-id-kohm = <1>;
-		max77779,model-version = <7>;
+		max77779,model-version = <8>;
 		max77779,force-reset-model-data;
 		max77779,fg-model = /bits/ 16 <
                         0xa510 0xb790 0xb8b0 0xbaa0 0xbc90 0xbd80 0xbe70 0xbf80
@@ -48,7 +48,7 @@ max77779,config {
 	/* BC79_2mOhm_3348(4.48v)_COS_RC2_ver3.ini, b/315443531#comment1 */
 	max77779,cos-2k {
 		max77779,batt-id-kohm = <2>;
-		max77779,model-version = <7>;
+		max77779,model-version = <8>;
 		max77779,force-reset-model-data;
 		max77779,fg-model = /bits/ 16 <
                         0xa510 0xb730 0xb880 0xba20 0xbb40 0xbec0 0xc020 0xc1c0
@@ -85,7 +85,7 @@ max77779,config {
 	/* BC79_2mOhm_3348(4.48v)_LWN_RC2_ver3.ini, b/315443531#comment1 */
 	max77779,lwn-4k {
 		max77779,batt-id-kohm = <4>;
-		max77779,model-version = <8>;
+		max77779,model-version = <9>;
 		max77779,force-reset-model-data;
 		max77779,fg-model = /bits/ 16 <
                         0xa470 0xb760 0xb980 0xbc00 0xbde0 0xbef0 0xc060 0xc220
@@ -122,7 +122,7 @@ max77779,config {
 	/* BC79_2mOhm_3524(4.5V)_ATL_RC2_Ver3.txt, b/332385584#comment3 */
 	max77779,atl-1k-4500mv {
 		max77779,batt-id-kohm = <17>;
-		max77779,model-version = <5>;
+		max77779,model-version = <6>;
 		max77779,force-reset-model-data;
 		max77779,fg-model = /bits/ 16 <
                         0xa4f0 0xb720 0xb9d0 0xbaf0 0xbca0 0xbe70 0xbfa0 0xc260
@@ -159,7 +159,7 @@ max77779,config {
 	/* BC79_2mOhm_3525(4.5V)_COS_RC2_Ver3.txt, b/332385584#comment3 */
 	max77779,cos-2k-4500mv {
 		max77779,batt-id-kohm = <18>;
-		max77779,model-version = <5>;
+		max77779,model-version = <6>;
 		max77779,force-reset-model-data;
 		max77779,fg-model = /bits/ 16 <
                         0xa4f0 0xb720 0xb8b0 0xba40 0xbd00 0xbe60 0xbfa0 0xc120
@@ -196,7 +196,7 @@ max77779,config {
 	/* BC79_2mOhm_3526(4.5V)_LWN_RC2_Ver3.txt, b/332385584#comment3 */
 	max77779,lwn-4k-4500mv {
 		max77779,batt-id-kohm = <20>;
-		max77779,model-version = <5>;
+		max77779,model-version = <6>;
 		max77779,force-reset-model-data;
 		max77779,fg-model = /bits/ 16 <
                         0xa510 0xb7b0 0xb990 0xbaa0 0xbbf0 0xbd80 0xbe80 0xbfb0
