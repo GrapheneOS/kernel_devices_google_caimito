@@ -4,6 +4,7 @@ DEVICE_DIR=private/devices/google/caimito
 SOC_DIR=private/google-modules/soc/gs
 
 # These just need to be relative to the ROOT_DIR
+FRAGMENT_CONFIG=${DEVICE_DIR}/caimito_gki.fragment
 . ${ROOT_DIR}/private/devices/google/zumapro/build.config.zumapro
 
 DTC_INCLUDE="${ROOT_DIR}/${SOC_DIR}/include/dtc \
