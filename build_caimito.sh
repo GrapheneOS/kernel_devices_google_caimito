@@ -14,8 +14,19 @@ if [ "${BUILD_STAGING_KERNEL}" = "1" ]; then
   parameters="--kernel_package=@//aosp-staging"
 fi
 
-exec tools/bazel run \
+# clean out/ to avoid confusion with signing keys
+test -d out/ && rm -rf out/
+
+tools/bazel run \
     ${parameters} \
     --config=stamp \
     --config=caimito \
     //private/devices/google/caimito:zumapro_caimito_dist "$@"
+
+sign_file=$(mktemp)
+trap '{ rm -f -- "$sign_file"; }' EXIT
+prebuilts/clang/host/linux-x86/clang-r487747c/bin/clang aosp/scripts/sign-file.c -lssl -lcrypto -o ${sign_file}
+find out/caimito/dist -type f -name "*.ko" \
+  -exec ${sign_file} sha256 \
+  $(find out/cache -type f -name "signing_key.pem") \
+  $(find out/cache -type f -name "signing_key.x509") {} \;
