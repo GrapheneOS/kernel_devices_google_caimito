@@ -23,10 +23,13 @@ tools/bazel run \
     --config=caimito \
     //private/devices/google/caimito:zumapro_caimito_dist "$@"
 
+# dont proceed if build failed
+test -d out/caimito/dist || exit 1
+
 sign_file=$(mktemp)
 trap '{ rm -f -- "$sign_file"; }' EXIT
 prebuilts/clang/host/linux-x86/clang-r487747c/bin/clang aosp/scripts/sign-file.c -lssl -lcrypto -o ${sign_file}
 find out/caimito/dist -type f -name "*.ko" \
   -exec ${sign_file} sha256 \
-  $(find out/cache -type f -name "signing_key.pem") \
-  $(find out/cache -type f -name "signing_key.x509") {} \;
+  $(find out/ -type f -name "signing_key.pem") \
+  $(find out/ -type f -name "signing_key.x509") {} \;
